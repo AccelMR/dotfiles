@@ -1,0 +1,22 @@
+# Información sensible
+.ssh/
+.env
+.netrc
+
+# Archivos generados automáticamente
+*~
+*.swp
+.cache/
+.DS_Store
+Thumbs.db
+
+# Archivos de sesión o estado temporal
+.bash_history
+.zsh_history
+.python_history
+
+# Configuraciones locales
+.Xauthority
+.local/
+.gnupg/
+.config/picom/picom.log
