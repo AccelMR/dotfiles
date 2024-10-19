@@ -10,7 +10,7 @@
         "hyprland/workspaces",
     ],
     "modules-center": [
-        "hyprland/window"
+        "sway/window"
     ],
     "modules-right": [
         "mpd",
@@ -23,7 +23,7 @@
         "temperature",
         "backlight",
         "keyboard-state",
-        "hyprland/language",
+        "sway/language",
         "battery",
         "battery#bat2",
         "clock",
@@ -31,7 +31,7 @@
         "custom/power"
     ],
     // Modules configuration
-    // "hyprland/workspaces": {
+    // "sway/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
     //     "warp-on-scroll": false,
@@ -56,10 +56,10 @@
             "unlocked": ""
         }
     },
-    "hyprland/mode": {
+    "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "hyprland/scratchpad": {
+    "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],

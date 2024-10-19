@@ -12,7 +12,8 @@ set -x PATH $HOME/p4v/bin/ $PATH
 export EDITOR=micro
 export VISUAL=micro
 export SUDO_EDITOR=micro
-
+export QT_QPA_PLATFORMTHEME=qt5ct
+export GTK_THEME=Catppuccin-Mocha:dark
 export "MICRO_TRUECOLOR"=1
 
 if status is-interactive
@@ -20,3 +21,7 @@ if status is-interactive
 end
 
 neofetch
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
