@@ -27,8 +27,9 @@ Thumbs.db
 # Archivos de bloqueo de dependencias
 .config/ags/flake.lock
 
-# exclude AGS as I can install it from source
-.config/ags/
 
 #exclude backgrounds
 .config/backgrounds/
+
+#exlude any logs
+*.log
