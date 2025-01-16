@@ -1,0 +1,34 @@
+# Información sensible
+.ssh/
+.env
+.netrc
+
+# Archivos generados automáticamente
+*~
+*.swp
+.cache/
+.DS_Store
+Thumbs.db
+
+# Archivos de sesión o estado temporal
+.bash_history
+.zsh_history
+.python_history
+
+# Configuraciones locales
+.Xauthority
+.local/
+.gnupg/
+.config/picom/picom.log
+
+# Archivos de respaldo
+.config/micro/backups/
+
+# Archivos de bloqueo de dependencias
+.config/ags/flake.lock
+
+# exclude AGS as I can install it from source
+.config/ags/
+
+#exclude backgrounds
+.config/backgrounds/
