@@ -7,9 +7,6 @@ This repository contains my personal configuration files for various application
 - [Hyprland Configuration](#hyprland-configuration)
 - [Pipewire Setup](#pipewire-setup)
 - [Arctis 7 Mixer Script](#arctis-7-mixer-script)
-- [Themes](#themes)
-- [Usage](#usage)
-- [License](#license)
 
 ## Hyprland Configuration
 
