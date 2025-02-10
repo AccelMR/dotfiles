@@ -27,8 +27,8 @@ The Hyprland configuration files are located in the `.config/hypr/` directory. T
 The setup_audio.sh script creates two virtual audio outputs (GameOutput and ChatOutput) and sets the Arctis 7 headset as the default output and chat output as the default input.
 
 ### Key Files
-- **[setup_audio.sh](.config/pipewire/setup_audio.sh): Script to set up virtual audio outputs and link them to Arctis 7 headsets.
-- **[startup.sh](.config/pipewire/startup.sh): Script to start a Python script that controls mixer volume for Arctis 7.
+- [setup_audio.sh](.config/pipewire/setup_audio.sh): Script to set up virtual audio outputs and link them to Arctis 7 headsets.
+- [startup.sh](.config/pipewire/startup.sh): Script to start a Python script that controls mixer volume for Arctis 7.
 
 ### Arctis 7 Mixer Script
 The [arctis7MixerScript.py](.config/pipewire/arctis7MixerScript.py) script controls the mixer volume for the Arctis 7 headset based on the Chatmix value. It adjusts the volumes of **GameOutput** and **ChatOutput** accordingly.

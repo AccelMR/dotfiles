@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-MAX_VOLUME = 90
+MAX_VOLUME = 100
 MAX_MIX_VALUE = 128
 HALF_MIX_VALUE = MAX_MIX_VALUE // 2
 

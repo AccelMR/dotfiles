@@ -1,6 +1,13 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BUN_INSTALL:/home/accelmr/\x2ebun
 SETUVAR --export EDITOR:micro
+SETUVAR --export GTK_THEME:Catppuccin\x2dMocha\x3adark
+SETUVAR --export --path LD_LIBRARY_PATH:/opt/rocm/lib\x1e/opt/rocm/lib64\x1e/usr/lib
+SETUVAR --export MICRO_TRUECOLOR:1
+SETUVAR --export OLLAMA_MODELS:/mnt/nvme2TB/ollama\x2dmodels
+SETUVAR --export --path PATH:/home/accelmr/\x2ebun/bin\x1e/home/accelmr/p4v/bin/\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/opt/rocm/bin
+SETUVAR --export QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR --export SUDO_EDITOR:micro
 SETUVAR --export VISUAL:micro
 SETUVAR __fish_initialized:3400
@@ -32,3 +39,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/opt/rocm/bin

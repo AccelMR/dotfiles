@@ -1,0 +1,34 @@
+# example configuration
+
+# configure release bind
+# release_bind = [ "KeyA", "KeyS", "KeyD", "KeyF" ]
+
+# optional port (defaults to 4242)
+port = 4242
+# # optional frontend -> defaults to gtk if available
+# # possible values are "cli" and "gtk"
+# frontend = "gtk"
+
+# list of authorized tls certificate fingerprints that
+# are accepted for incoming traffic
+# [authorized_fingerprints]
+# "bc:05:ab:7a:a4:de:88:8c:2f:92:ac:bc:b8:49:b8:24:0d:44:b3:e6:a4:ef:d7:0b:6c:69:6d:77:53:0b:14:80" = "iridium"
+
+# define a client on the right side with host name "iridium"
+[left]
+# hostname
+hostname = "MX-IT05075"
+# activate this client immediately when lan-mouse is started
+activate_on_startup = true
+# optional list of (known) ip addresses
+ips = ["192.168.3.46"]
+
+# define a client on the left side with IP address 192.168.178.189
+[right]
+# The hostname is optional: When no hostname is specified,
+# at least one ip address needs to be specified.
+hostname = "amrl"
+# ips for ethernet and wifi
+ips = ["192.168.3.8"]
+# optional port
+port = 4242
