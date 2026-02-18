@@ -2,6 +2,8 @@
 # ~/.config/hypr/scripts/WallpaperChanged.sh
 
 SCRIPTSDIR="$HOME/.config/hypr/scripts"
+# Define a fixed path for the symlink
+LINK_PATH="$HOME/.config/.current_wallpaper.image"
 
 current_wall=$(swww query 2>/dev/null | grep -oP 'image: \K[^\s]+' | head -n 1)
 
@@ -12,21 +14,21 @@ fi
 if [[ -f "$current_wall" ]]; then
 
   hellwal -i "$current_wall"
-  W
+
+  # Create symlink if wallpaper is PNG or JPG
+  extension="${current_wall##*.}"
+  extension="${extension,,}" # Convert to lowercase
+
+  if [[ "$extension" == "png" || "$extension" == "jpg" || "$extension" == "jpeg" ]]; then
+    ln -sf "$current_wall" "$LINK_PATH"
+  fi
 
   sleep 0.5
   
   if [[ -x "${SCRIPTSDIR}/Refresh.sh" ]]; then
     ${SCRIPTSDIR}/Refresh.sh
   fi
-
-  sleep 0.5
-
-  # Create symlink if wallpaper is PNG
-  if [[ "${current_wall,,}" == *.png ]]; then
-    ln -sf "$current_wall" "$HOME/.config/.current_wallpaper.png"
-  fi
-    
+  
   notify-send "Wallpaper Changed" "Theme updated with hellwal" -i "$current_wall"
 else
   echo "❌ Error: No se pudo obtener la ruta del wallpaper"

@@ -51,7 +51,7 @@ mainbox {
     enabled:                    true;
     orientation:                vertical;
     padding:					8px;
-    background-image:           url("~/.config/.current_wallpaper.png", width);
+    background-image:           url("~/.config/.current_wallpaper.image", width);
     children:                   [ "inputbar", "imagebox" ];
     border-radius:              12px;
 }
