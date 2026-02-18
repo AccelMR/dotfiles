@@ -23,12 +23,10 @@
   ],
   "modules-right": [
     "custom/headset_battery",
-    //"custom/gpu_usage",
     "group/motherboard",
     "custom/separator#blank_2",
     "custom/separator#dot-line",
     "custom/separator#blank_2",
-    "backlight",
     "group/audio",
     "custom/swaync",
     "custom/separator#dot-line",

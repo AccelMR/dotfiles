@@ -204,7 +204,7 @@
   "group/laptop": {
     "orientation": "horizontal",
     "modules": [
-      //"backlight",
+      "backlight",
       "battery",
     ]
   },
