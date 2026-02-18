@@ -1,7 +1,7 @@
 @import '../../.cache/hellwal/colors-waybar.css';
 
 @define-color bar-bg rgba(0, 0, 0, 0);
-@define-color main-bg alpha(@color1, 0);
+@define-color main-bg #26233a;
 @define-color main-fg @color7;
 @define-color wb-act-bg #31748f;
 @define-color wb-act-fg #9ccfd8;
