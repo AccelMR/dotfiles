@@ -71,39 +71,9 @@ function cleanup
     end
 end
 
-function fastfetch_min
-    if test "$argv[1]" = "foot"
-        /bin/fastfetch -c ~/.config/fastfetch/minimal_foot.jsonc
-    else if test "$argv[1]" = "kitty"
-        /bin/fastfetch -c ~/.config/fastfetch/minimal_kitty.jsonc
-    else
-        /bin/fastfetch -c ~/.config/fastfetch/minimal_gen.jsonc
-    end
-end
-
-
-function __set_fastfetch_config
-    set -l config
-    switch $TERM
-        case foot
-            set config ~/.config/fastfetch/foot.jsonc
-        case xterm-kitty
-            set config ~/.config/fastfetch/kitty.jsonc
-        case '*'
-            set config ''
-    end
-
-    if test -n "$config"
-        alias fastfetch "fastfetch --load-config $config"
-    end
-
-    if test -z "$ZELLIJ"
-        if test -n "$config"
-            fastfetch_min (basename $config .jsonc)
-        else
-            fastfetch_min
-        end
-    end
+# Run fastfetch on interactive shell startup
+if status --is-interactive
+  command fastfetch -c ~/.config/fastfetch/kitty.jsonc
 end
 
 ## Editor setup
