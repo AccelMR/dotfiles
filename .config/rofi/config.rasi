@@ -28,8 +28,8 @@ configuration {
 window {
     /*width:						1000px; */
     /* height:						500px; */
-    width:                      70%;
-    height:						50%;
+    width:                      50%;
+    height:						30%;
     x-offset:                   0px;
     y-offset:                   0px;
     spacing:                    0px;
