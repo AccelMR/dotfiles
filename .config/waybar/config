@@ -22,7 +22,7 @@
     "clock",
   ],
   "modules-right": [
-    "custom/headset_battery",
+    //"custom/headset_battery",
     "group/motherboard",
     "custom/separator#blank_2",
     "custom/separator#dot-line",
@@ -30,7 +30,7 @@
     "group/audio",
     "custom/swaync",
     "custom/separator#dot-line",
-    "group/laptop",
+    //"group/laptop",
     "custom/power"
   ],
 }

@@ -1,7 +1,7 @@
 #!/bin/bash
-# ~/.config/hypr/scripts/WallpaperChanged.sh
+# ~/.config/scripts/WallpaperChanged.sh
 
-SCRIPTSDIR="$HOME/.config/hypr/scripts"
+SCRIPTSDIR="$HOME/.config/scripts"
 # Define a fixed path for the symlink
 LINK_PATH="$HOME/.config/.current_wallpaper.image"
 

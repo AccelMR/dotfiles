@@ -1,5 +1,5 @@
 
-SCRIPTSDIR="$HOME/.config/hypr/scripts"
+SCRIPTSDIR="$HOME/.config/scripts"
 
 # Recargar Hyprland
 hyprctl reload

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#SwayLock=$HOME/.config/hypr/scripts/LockScreen.sh
+#SwayLock=$HOME/.config/scripts/LockScreen.sh
 
 # CMDs
 uptime_info=$(uptime -p | sed -e 's/up //g')
