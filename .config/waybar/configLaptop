@@ -22,7 +22,6 @@
     "clock",
   ],
   "modules-right": [
-    //"custom/headset_battery",
     "group/motherboard",
     "custom/separator#blank_2",
     "custom/separator#dot-line",
