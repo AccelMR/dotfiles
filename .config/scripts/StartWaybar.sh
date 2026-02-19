@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-# Start Waybar with appropriate config based on hardware
-# Indentation: 2 spaces
-
 pkill waybar
+sleep 0.3
 if ~/.config/scripts/IsLaptop.sh; then
   # Laptop: use full config with laptop group
   waybar -c ~/.config/waybar/configLaptop &

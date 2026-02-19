@@ -1,27 +1,34 @@
+/* import hellwal colors */
 @import '../../.cache/hellwal/colors-waybar.css';
 
+/* base colors from hellwal */
 @define-color bar-bg rgba(0, 0, 0, 0);
-@define-color main-bg #26233a;
+@define-color main-bg @background;
 @define-color main-fg @color7;
-@define-color wb-act-bg #31748f;
-@define-color wb-act-fg #9ccfd8;
-@define-color wb-hvr-bg #eb6f92;
-@define-color wb-hvr-fg #f6c177;
 
+/* active / hover colors derived for contrast */
+@define-color wb-act-bg @color6;
+@define-color wb-act-fg @foreground;
+
+@define-color wb-hvr-bg @color4;
+@define-color wb-hvr-fg @foreground;
+
+/* tooltip styling */
 tooltip {
-    background: @main-bg;
-    color: @main-fg;
-    border-radius: 8px;
-    border-width: 0px;
-    border: 1.5px solid @main-fg;
-    border-style: solid;
-    border-color: @main-fg;
+  background: @main-bg;
+  color: @main-fg;
+  border-radius: 8px;
+  border-width: 0px;
+  border: 1.5px solid @main-fg;
+  border-style: solid;
+  border-color: @main-fg;
 }
 
+/* modules shared block */
 #backlight,
 #backlight-slider,
 #battery,
-#bluetooth, 
+#bluetooth,
 #cava,
 #custom-mviz,
 #clock,
@@ -73,7 +80,7 @@ tooltip {
 #custom-weather.clearNight,
 #custom-weather.cloudyFoggyDay,
 #custom-weather.cloudyFoggyNight,
-#custom-weather.default, 
+#custom-weather.default,
 #custom-weather.rainyDay,
 #custom-weather.rainyNight,
 #custom-weather.severe,
@@ -94,16 +101,33 @@ tooltip {
 #custom-palette,
 #custom-headset_battery,
 #custom-weather.sunnyDay {
-    color: @main-fg;
-    background: alpha(@main-bg, 0.7);
-    opacity: 1;
-	padding-top: 2px;
-	padding-bottom: 2px;
-    padding-left: 6px;
-    padding-right: 6px;
-    border: 1.5px solid @main-fg;
-    border-style: solid;
-    border-color: @main-fg;
+  color: @main-fg;
+  background: alpha(@main-bg, 0.70);
+  opacity: 1;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1.5px solid @main-fg;
 }
 
+/* hover state */
+#taskbar button:hover,
+#workspaces button:hover,
+#tray > .active:hover,
+#pulseaudio:hover,
+#mpris:hover {
+  background: @wb-hvr-bg;
+  color: @wb-hvr-fg;
+}
+
+/* active state */
+#workspaces button.active,
+#taskbar button.active,
+#mode {
+  background: @wb-act-bg;
+  color: @wb-act-fg;
+}
+
+/* import extras */
 @import 'style/common.css';
