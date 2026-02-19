@@ -30,7 +30,7 @@
     "group/audio",
     "custom/swaync",
     "custom/separator#dot-line",
-    //"group/laptop",
+    "group/laptop",
     "custom/power"
   ],
 }

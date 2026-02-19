@@ -784,7 +784,7 @@
     "smooth-scrolling-threshold": 1,
   },
   "custom/headset_battery": {
-    "exec": "~/.config/scripts/waybar-headset-batt.sh",
+    "exec": "~/.config/scripts/Waybar/GetHeadsetBattery.sh",
     "interval": 6,
     "return-type": "json",
     "format": "{text}",
