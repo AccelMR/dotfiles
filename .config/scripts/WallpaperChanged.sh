@@ -16,20 +16,20 @@ current_wall="${current_wall/#\~/$HOME}"
 
 # If argument is empty, try to read from waypaper config as fallback
 if [[ -z "$current_wall" || ! -f "$current_wall" ]]; then
-  current_wall=$(grep "^wallpaper =" ~/.config/waypaper/config.ini | cut -d'=' -f2 | xargs)
+  current_wall=$(grep "^wallpaper =" ~/.config/waypaper/config.ini 2>/dev/null | cut -d'=' -f2 | xargs)
   current_wall="${current_wall/#\~/$HOME}"
 fi
 
 # Check if wallpaper path is valid
 if [[ -f "$current_wall" ]]; then
-  # Force hyprpaper to update (Waypaper sometimes fails to trigger it)
-  # Preload and set for all monitors
-  hyprctl hyprpaper preload "$current_wall" > /dev/null 2>&1
-  hyprctl hyprpaper wallpaper ",$current_wall" > /dev/null 2>&1
+  # Set wallpaper via modern hyprpaper IPC (single command)
+  # Empty monitor name means "fallback" for monitors without a specific assignment
+  # fit_mode can be: contain|cover|tile|fill (waypaper uses "fill" in your config)
+  hyprctl hyprpaper wallpaper ",$current_wall,fill" >/dev/null 2>&1
 
   # Get current timestamp of the cache file
   if [[ -f "$CACHE_FILE" ]]; then
-    OLD_TIME=$(stat -c %Y "$CACHE_FILE")
+    OLD_TIME=$(stat -c %Y "$CACHE_FILE" 2>/dev/null || echo 0)
   else
     OLD_TIME=0
   fi
@@ -38,23 +38,25 @@ if [[ -f "$current_wall" ]]; then
   hellwal -i "$current_wall"
 
   # Wait until hellwal actually updates the cache file
+  # Timeout after 5 seconds to prevent infinite loop
   COUNTER=0
-  while [[ $(stat -c %Y "$CACHE_FILE" 2>/dev/null) == "$OLD_TIME" && $COUNTER -lt 50 ]]; do
+  while [[ $(stat -c %Y "$CACHE_FILE" 2>/dev/null || echo 0) == "$OLD_TIME" && $COUNTER -lt 50 ]]; do
     sleep 0.1
     ((COUNTER++))
   done
 
-  # Handle symlink for image viewers
-  ln -sf "$current_wall" "$LINK_PATH"
+  # Handle symlink for image viewers or other tools
+  extension="${current_wall##*.}"
+  extension="${extension,,}"
+
+  if [[ "$extension" == "png" || "$extension" == "jpg" || "$extension" == "jpeg" || "$extension" == "webp" ]]; then
+    ln -sf "$current_wall" "$LINK_PATH"
+  fi
 
   # Refresh waybar and other components
   if [[ -x "${SCRIPTSDIR}/Refresh.sh" ]]; then
-    ${SCRIPTSDIR}/Refresh.sh
+    "${SCRIPTSDIR}/Refresh.sh"
   fi
-  
-  # Unload unused wallpapers to save RAM
-  hyprctl hyprpaper unload all > /dev/null 2>&1
-  hyprctl hyprpaper preload "$current_wall" > /dev/null 2>&1
 
   notify-send "Wallpaper Changed" "Theme updated with hellwal" -i "$current_wall"
 else
