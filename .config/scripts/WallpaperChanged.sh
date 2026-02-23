@@ -27,6 +27,8 @@ if [[ -f "$current_wall" ]]; then
   # fit_mode can be: contain|cover|tile|fill (waypaper uses "fill" in your config)
   hyprctl hyprpaper wallpaper ",$current_wall,fill" >/dev/null 2>&1
 
+  pkill -f waypaper
+
   # Get current timestamp of the cache file
   if [[ -f "$CACHE_FILE" ]]; then
     OLD_TIME=$(stat -c %Y "$CACHE_FILE" 2>/dev/null || echo 0)
@@ -57,8 +59,6 @@ if [[ -f "$current_wall" ]]; then
   if [[ -x "${SCRIPTSDIR}/Refresh.sh" ]]; then
     "${SCRIPTSDIR}/Refresh.sh"
   fi
-
-  notify-send "Wallpaper Changed" "Theme updated with hellwal" -i "$current_wall"
 else
   notify-send "Error" "Wallpaper path not found: $current_wall" -u critical
   exit 1
