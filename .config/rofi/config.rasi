@@ -187,7 +187,7 @@ element normal.active {
 
 element selected.normal {
   background-color:           @selected-normal-background;
-  text-color:                 @foreground;
+  text-color:                 @selected-normal-foreground;
 }
 
 element selected.urgent {
@@ -197,7 +197,7 @@ element selected.urgent {
 
 element selected.active {
   background-color:           inherit;
-  text-color:                 @foreground;
+  text-color:                 @selected-normal-foreground;
 }
 
 element alternate.normal {
