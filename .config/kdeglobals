@@ -138,7 +138,7 @@ accentActiveTitlebar=false
 shadeSortColumn=true
 
 [Icons]
-Theme=Fancy-Dark-Icons
+Theme=neo-candy-icons
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
