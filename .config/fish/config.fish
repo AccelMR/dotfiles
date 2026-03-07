@@ -95,3 +95,7 @@ alias .. 'cd ..'
 # Get the error messages from journalctl
 alias jctl 'journalctl -p 3 -xb'
 
+# Hellwal terminal colors
+source ~/.cache/hellwal/variablesfish.fish
+sh ~/.cache/hellwal/terminal.sh
+
