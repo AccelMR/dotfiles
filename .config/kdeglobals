@@ -142,6 +142,7 @@ Theme=neo-candy-icons
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
+ShowDeleteCommand=false
 contrast=4
 
 [KFileDialog Settings]
