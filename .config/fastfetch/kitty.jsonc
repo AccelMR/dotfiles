@@ -73,6 +73,7 @@
     {
       "key": "│{#38;5;79} 󰘚 GPU    {#white}│",
       "type": "gpu",
+      
       "format": "{name}",
       "keyColor": "white"
     },
