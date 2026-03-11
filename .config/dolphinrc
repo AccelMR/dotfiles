@@ -36,6 +36,9 @@ Places Icons Static Size=16
 [KPropertiesDialog]
 3440x1440 screen: Window-Maximized=true
 
+[MainWindow]
+MenuBar=Disabled
+
 [MainWindow][Toolbar mainToolBar]
 ToolButtonStyle=IconOnly
 
