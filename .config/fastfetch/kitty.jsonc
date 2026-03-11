@@ -1,113 +1,108 @@
-{   
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "type":"kitty",
-        "source": "/home/accelmr/.config/fastfetch/assets/Bridge4.png",
-        "width": 26,
-        "height": 12,
-        "padding": {
-            "top": 1,
-            "left": 1,
-            "right": 1
-        }
-    },
-    // Manually add seperator since
-    // we need to add box top and bottom
-    "display": {
-        "separator": ""
-    },
-    // Modules
-    "modules": [
-        // Top of Box
-        {
-            "key": "╭──────────╮",
-            "type": "custom",
-            "keyColor": "white"
-        },
-        {
-            "key": "│{#33}  user  {#white} │",
-            "type": "title",
-            "format": " {user-name}@{host-name}",
-            "keyColor": "white"
-        },
-        {
-            "key": "{#white}│{#38;2;250;179;135} 󰻀 distro {#white}│ ",
-            "type": "os",
-            "format": "Arch Linux x86_64",
-            "keyColor": "38;2;250;179;135"
-        },
-        {
-            "key": "│{#33} 󰌢 kernel {#white}│ ",
-            "type": "kernel",
-            "keyColor": "white"
-        },
-        {
-          "key": "│{#32}  term   {#white}│ ",
-          "type": "terminal",
-          "keyColor": "white"
-        },
-        {
-          "key": "│{#34}  de/wm  {#white}│ ",
-          "type": "wm",
-          "keyColor": "white"
-        },
-        {
-          "key": "│{#36;2;78;154;66} 󰍹 display{#white}│ ",
-          "type": "display",
-          "keyColor": "white",
-          "format": "{1}x{2} {3}Hz {12}\""
-        },
-        {
-          "key": "{#white}│{#38;2;203;166;247}  pkgs   {#white}│ ",
-          "type": "packages",
-          "format": "{2}(pacman){?3}{?}",
-          "keyColor": "38;2;203;166;247"
-        },
 {
-          "key": "│{#36} 󱎫 uptime {#white}│ ",
-          "type": "uptime",
-          "keyColor": "white"
-        },
-        {
-          "key": "│{#35} 󰃭 os age {#white}│ ",
-          "type": "command",
-          "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-          "keyColor": "white"
-        },
-        {
-            "key": "│{#37;2;0;255;0} {#32}󰘚 GPU {#white}   │ ",
-            "type": "gpu",
-            "format": "{name}" // See `fastfetch -h gpu-format` for details
-        },
-        {
-            "key": "│{#37;2;0;255;0} {#32}󰋛 CPU {#white}   │ ",
-            "type": "cpu",
-            "format": "{1} ({3}C, {4}GHz {5}%)"
-        },
-        {
-            "key": "│{#37;2;0;255;0} {#32}󰍛 RAM {#white}   │ ",
-            "type": "memory",
-            "format": "{used}MiB / {total}MiB"
-        },
-        // Colors seperator
-        {
-          "key": "├──────────┤",
-          "type": "custom",
-          "keyColor": "white"
-        },
-        {
-            "key": "{#white}│  colors │ ",
-            "type": "custom",
-            "format": "{#30;5;0;255;255} {#31;5} {#32;5} {#33;5} {#34;5} {#35;5} {#36;5} {#37;5}",
-            // "format": "{#30;5;0;255;255}R {#31;5}E {#32;5}M {#33;5}𝚇   {#34;5}ジ {#35;5}ン {#36;5}ク {#37;5}ス",
-            "keyColor": "white"
-        },
-        // Bottom of Box
-        {
-            "key": "╰──────────╯",
-            "format": "",
-            "type": "custom",
-            "keyColor": "white"
-        }
-    ]
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "/home/accelmr/.config/fastfetch/assets/Bridge4.png",
+    "width": 26,
+    "height": 12,
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 1
+    }
+  },
+  "display": {
+    "separator": ""
+  },
+  "modules": [
+    {
+      "key": "╭──────────╮",
+      "type": "custom",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;111}  user   {#white}│",
+      "type": "title",
+      "format": "{user-name}@{host-name}",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;117} 󰻀 distro {#white}│",
+      "type": "os",
+      "format": "Arch Linux",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;153} 󰌢 kernel {#white}│",
+      "type": "kernel",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;120}  term   {#white}│",
+      "type": "terminal",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;186}  de/wm  {#white}│",
+      "type": "wm",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;216} 󰍹 display{#white}│",
+      "type": "display",
+      "keyColor": "white",
+      "format": "{1}x{2} {3}Hz"
+    },
+    {
+      "key": "│{#38;5;210}  pkgs   {#white}│",
+      "type": "packages",
+      "format": "{2} (pacman)",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;176} 󱎫 uptime {#white}│",
+      "type": "uptime",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;147} 󰃭 os age {#white}│",
+      "type": "command",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;79} 󰘚 GPU    {#white}│",
+      "type": "gpu",
+      "format": "{name}",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;114} 󰋛 CPU    {#white}│",
+      "type": "cpu",
+      "format": "{1} ({3}C)",
+      "keyColor": "white"
+    },
+    {
+      "key": "│{#38;5;192} 󰍛 RAM    {#white}│",
+      "type": "memory",
+      "format": "{used} / {total}",
+      "keyColor": "white"
+    },
+    {
+      "key": "├──────────┤",
+      "type": "custom",
+      "keyColor": "white"
+    },
+    {
+      "key": "│  colors │",
+      "type": "custom",
+      "format": "{#38;5;111}  {#38;5;117}  {#38;5;120}  {#38;5;186}  {#38;5;216}  {#38;5;210}  {#38;5;176}  {#38;5;147} ",
+      "keyColor": "white"
+    },
+    {
+      "key": "╰──────────╯",
+      "type": "custom",
+      "keyColor": "white"
+    }
+  ]
 }
