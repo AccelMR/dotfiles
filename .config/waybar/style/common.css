@@ -107,7 +107,8 @@ window#waybar {
 }
 
 #network {
-    min-width: 200px;
+    min-width: 30px;
+    padding-left: 0px;
 }
 
 #custom-backlight {

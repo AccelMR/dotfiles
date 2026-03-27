@@ -247,8 +247,6 @@
     "interval": 60,
     "align": 0,
     "rotate": 0,
-    //"bat": "BAT1",
-    //"adapter": "ACAD",
     "full-at": 100,
     "design-capacity": false,
     "states": {
@@ -256,11 +254,11 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}%",
+    "format": "{icon} {time}",
     "format-charging": " {capacity}%",
     "format-plugged": "󱘖 {capacity}%",
     "format-full": "{icon} Full",
-    "format-alt": "{icon} {time}",
+    "format-alt": "{icon} {capacity}%",
     "format-icons": [
       "",
       "",
@@ -343,11 +341,8 @@
   },
   "disk": {
     "interval": 30,
-    //"format": "󰋊",
     "path": "/",
-    //"format-alt-click": "click",
     "format": "<big>󰋊</big> {percentage_used}%",
-    //"tooltip": true,
     "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
   },
   "hyprland/language": {
@@ -411,10 +406,9 @@
     "format-disconnected": "󰌙",
     "tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
     "format-linked": "󰈁 {ifname} (No IP)",
-    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%  {bandwidthUpBytes}  {bandwidthDownBytes}",
     "tooltip-format-ethernet": "{ifname} 󰌘",
     "tooltip-format-disconnected": "󰌙 Disconnected",
-    "max-length": 50,
     "format-icons": [
       "󰤯",
       "󰤟",

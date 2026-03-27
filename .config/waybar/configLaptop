@@ -29,6 +29,7 @@
     "group/audio",
     "custom/swaync",
     "custom/separator#dot-line",
+    "network",
     "group/laptop",
     "custom/power"
   ],
