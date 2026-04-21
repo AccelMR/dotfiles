@@ -56,10 +56,18 @@ toggle_mic() {
 if [[ "$1" == "--get" ]]; then
   get_volume
 elif [[ "$1" == "--inc" ]]; then
-  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+  # Get current volume and only increase if below 100%
+  current=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2*100)}')
+  if [[ "$current" -lt 100 ]]; then
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+    # Clamp to 100% in case it overshoots
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 1.0 --limit
+  fi
+  notify-send -e -a volume -h string:x-canonical-private-synchronous:volume_notif -h boolean:SWAYNC_BYPASS_DND:true -u low -i "$(get_icon)" "Volume: $(get_volume)"
   get_volume
 elif [[ "$1" == "--dec" ]]; then
   wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+  notify-send -e -a volume -h string:x-canonical-private-synchronous:volume_notif -h boolean:SWAYNC_BYPASS_DND:true -u low -i "$(get_icon)" "Volume: $(get_volume)"
   get_volume
 elif [[ "$1" == "--toggle" ]]; then
   toggle_mute
