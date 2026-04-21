@@ -11,6 +11,7 @@ DirectorySizeMode=None
 RecursiveDirectorySizeLimit=3
 
 [DetailsMode]
+Grouping=-1
 PreviewSize=16
 SidePadding=0
 
@@ -18,7 +19,7 @@ SidePadding=0
 3440x1440 screen: Window-Maximized=true
 
 [General]
-GlobalViewProps=false
+GlobalViewProps=true
 OpenNewTabAfterLastTab=true
 ShowStatusBar=FullWidth
 ShowZoomSlider=true
