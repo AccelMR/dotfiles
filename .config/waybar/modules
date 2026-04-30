@@ -477,14 +477,14 @@
   "temperature": {
     "interval": 5,
     "tooltip": false,
-    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon3/temp1_input",
-    "thermal-zone": 0,
-    "critical-threshold": 70,
-    "format-critical": " {icon}{temperatureC}°C",
+    "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "{icon} {temperatureC}°C",
     "format": "{icon} {temperatureC}°C",
     "format-icons": [
       "<big>󰈸</big>"
-    ],
+    ]
+  },
     // "on-click-right": "foot --title nvtop sh -c 'nvtop'"
     "on-click": "kitty -e gotop --bytes --celsius --no-nvidia",
     "on-click-right": "psensor"
