@@ -18,9 +18,9 @@ function maintain
     echo "No orphans to remove."
   end
 
-  # Clean up corrupted or leftover download directories
-  if ls /var/cache/pacman/pkg/download-* 1> /dev/null 2>&1; then
+# Clean up corrupted or leftover download directories
+  if test -n "$(find /var/cache/pacman/pkg/ -maxdepth 1 -name 'download-*' -print -quit 2>/dev/null)"
     echo "--- Cleaning leftover download artifacts ---"
-    sudo rm -rf /var/cache/pacman/pkg/download-*
-  fi
+    sudo find /var/cache/pacman/pkg/ -maxdepth 1 -name 'download-*' -exec rm -rf {} +
+  end
 end
