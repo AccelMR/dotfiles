@@ -481,14 +481,13 @@
     "critical-threshold": 80,
     "format-critical": "{icon} {temperatureC}°C",
     "format": "{icon} {temperatureC}°C",
-    "format-icons": [
-      "<big>󰈸</big>"
-    ]
-  },
-    // "on-click-right": "foot --title nvtop sh -c 'nvtop'"
-    "on-click": "kitty -e gotop --bytes --celsius --no-nvidia",
-    "on-click-right": "psensor"
-  },
+  "format-icons": [
+        "<big>󰈸</big>"
+      ],
+      // "on-click-right": "foot --title nvtop sh -c 'nvtop'"
+      "on-click": "kitty -e gotop --bytes --celsius --no-nvidia",
+      "on-click-right": "psensor"
+    },
   "temperature#gpu": {
     "interval": 5,
     "tooltip": true,
@@ -689,9 +688,9 @@
     "on-click-right": "dunstctl history-clear",
     "interval": 5
   },
-  "custom/swaync": {
+  "custom/swaync": {  
     "tooltip": false,
-    // "format": "{icon} {}",
+    "format": "{icon} {}",
     "format": "{2}  {0}",
     "format-icons": {
       "notification": "<span foreground='red'><sup></sup></span>",
