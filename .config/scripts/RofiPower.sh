@@ -45,7 +45,7 @@ run_cmd() {
             systemctl suspend
             ;;
         "󰿅")
-            hyprctl dispatch exit 0
+            hyprctl dispatch 'hl.dsp.exit()'
             ;;
         "󰜉")
             systemctl reboot
