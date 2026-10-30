@@ -79,6 +79,7 @@ for _, d in ipairs(directions) do
 end
 
 -- Layout
+hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))
 
 -- Grouping
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle())

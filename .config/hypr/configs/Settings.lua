@@ -36,6 +36,7 @@ hl.config({
     dwindle = {
         --pseudotile = true,
         preserve_split = true,
+        smart_split = true,
         special_scale_factor = 0.8,
         split_width_multiplier = 1.5,
         default_split_ratio = 1.3,
